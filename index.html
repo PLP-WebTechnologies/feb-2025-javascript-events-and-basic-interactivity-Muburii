@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Space Explorer 🚀</h1>
+        <p>Your interactive journey through the cosmos</p>
+        <div id="keypress-display">Press any key to see its code</div>
+    </header>
+
+    <main>
+        <!-- Event Handling Section -->
+        <section class="section" id="event-section">
+            <h2>Mission Control 🎮</h2>
+            <div class="control-panel">
+                <button id="change-button">Change Mission Status</button>
+                <div id="status-display">Mission Status: STANDBY</div>
+                <div id="hover-area">Hover over me for a surprise!</div>
+                <button id="secret-button">Secret Command (Double-Click Me)</button>
+            </div>
+        </section>
+
+        <!-- Interactive Elements Section -->
+        <section class="section" id="interactive-section">
+            <h2>Cosmic Gallery 🌌</h2>
+            
+            <!-- Tabs -->
+            <div class="tabs">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="planets">Planets</button>
+                    <button class="tab-btn" data-tab="stars">Stars</button>
+                    <button class="tab-btn" data-tab="galaxies">Galaxies</button>
+                </div>
+                
+                <div class="tab-content active" id="planets">
+                    <h3>Explore Planets</h3>
+                    <p>Our solar system contains eight planets, from Mercury to Neptune.</p>
+                </div>
+                
+                <div class="tab-content" id="stars">
+                    <h3>Discover Stars</h3>
+                    <p>Stars are massive celestial bodies of plasma held together by gravity.</p>
+                </div>
+                
+                <div class="tab-content" id="galaxies">
+                    <h3>Visit Galaxies</h3>
+                    <p>Galaxies are vast systems of stars, gas, dust, and dark matter.</p>
+                </div>
+            </div>
+            
+            <!-- Image Slideshow -->
+            <div class="slideshow">
+                <h3>Space Images</h3>
+                <div class="slideshow-container">
+                    <div class="slide">
+                        <div class="space-image" id="image1">🪐</div>
+                        <div class="caption">Saturn</div>
+                    </div>
+                    <div class="slide">
+                        <div class="space-image" id="image2">☄️</div>
+                        <div class="caption">Comet</div>
+                    </div>
+                    <div class="slide">
+                        <div class="space-image" id="image3">🌠</div>
+                        <div class="caption">Shooting Star</div>
+                    </div>
+                </div>
+                <div class="slideshow-controls">
+                    <button id="prev-slide">Previous</button>
+                    <button id="next-slide">Next</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Form Validation Section -->
+        <section class="section" id="form-section">
+            <h2>Join The Space Program 👨‍🚀</h2>
+            <form id="space-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                    <span class="validation-message" id="name-validation"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                    <span class="validation-message" id="email-validation"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Space Password:</label>
+                    <input type="password" id="password" required>
+                    <span class="validation-message" id="password-validation"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="mission">Mission Preference:</label>
+                    <select id="mission" required>
+                        <option value="">Select a mission</option>
+                        <option value="mars">Mars Expedition</option>
+                        <option value="moon">Moon Base</option>
+                        <option value="orbit">Earth Orbit</option>
+                    </select>
+                    <span class="validation-message" id="mission-validation"></span>
+                </div>
+                
+                <button type="submit" id="submit-button">Submit Application</button>
+            </form>
+            <div id="form-success" class="hidden">
+                <h3>Application Submitted Successfully! 🎉</h3>
+                <p>Thank you for joining our space program. We'll be in touch soon!</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>JavaScript Event Handling Assignment</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
